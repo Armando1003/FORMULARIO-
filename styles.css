@@ -1,0 +1,165 @@
+/* Importar Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: #f3f3f3;
+}
+
+.container {
+  max-width: 500px;
+  width: 100%;
+  background: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.container header {
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: 500;
+  text-align: left;
+}
+
+.form {
+  margin-top: 20px;
+}
+
+.input-box {
+  width: 100%;
+  margin-top: 15px;
+}
+
+.input-box label {
+  display: block;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.input-box input,
+.input-box textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.input-box textarea {
+  resize: none;
+  height: 100px;
+}
+
+.column {
+  display: flex;
+  gap: 15px;
+}
+
+.column .input-box {
+  flex: 1;
+}
+
+.options {
+  gap: 40px; /* Espacio entre las opciones */
+  align-items: center; /* Alinea verticalmente */
+  flex-wrap: nowrap; /* Evita que se vayan a otra línea */
+}
+
+.radio {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Espacio entre el radio y el texto */
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 10px;
+  text-align: center;
+}
+
+.radio input {
+  accent-color: #1B7745;
+  margin: 0; /* Elimina espacios extra */
+  width: 16px; /* Ajusta el tamaño del radio */
+  height: 16px;
+}
+
+
+.consent {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.consent input {
+  width: 18px;
+  height: 18px;
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  font-size: 1rem;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  background: #1B7745;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background 0.2s;
+}
+
+.mensaje {
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+/* Estilo para mensaje de éxito */
+.mensaje.éxito {
+  background: #d1e7dd;
+  color: #0f5132;
+  border: 1px solid #badbcc;
+}
+
+/* Estilo para mensaje de error */
+.mensaje.error {
+  background: #f8d7da;
+  color: #842029;
+  border: 1px solid #f5c2c7;
+}
+
+/* Ocultar el mensaje después de 3 segundos */
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+.mensaje {
+  animation: fadeOut 3s forwards;
+}
+
+button:hover {
+  background: #155A33;
+}
+
+/* Responsive */
+@media screen and (max-width: 500px) {
+  .column {
+    flex-direction: column;
+  }
+}
